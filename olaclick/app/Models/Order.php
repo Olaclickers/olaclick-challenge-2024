@@ -9,6 +9,7 @@ class Order extends Model
 {
     use HasFactory;
 
+    const DELIVERED_STATUS = "delivered";
     protected $fillable = ['client_id', 'detail', 'total_price', 'status'];
 
     public function client()
