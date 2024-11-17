@@ -1,18 +1,34 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { ref } from 'vue';
+import ordersData from '@/assets/orders.json';
+import OrderListAndmin from '@/components/OrderListAndmin.vue';
+
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    OrderListAndmin
+  },
+  setup() {
+    const orders = ref(ordersData);
+
+    const updateOrderStatus = (id, newStatus) => {
+      const order = orders.value.find(order => order.Id === id);
+      if (order) {
+        order.Estado = newStatus;
+      }
+    };
+
+    return {
+      orders,
+      updateOrderStatus
+    };
   }
-}
+};
 </script>
+
+<template>
+  <div>
+    <OrderListAndmin :orders="orders" />
+  </div>
+</template>
