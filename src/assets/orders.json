@@ -70,7 +70,7 @@
             "DetalleOrden": [
                 {
                     "Item": "A",
-                    "Descripcion": "Ensalada cesar",
+                    "Descripcion": "Pizza margarita",
                     "Cantidad": 1,
                     "CostoUnitario": 100.00,
                     "CostoTotal": 100.00
@@ -93,10 +93,10 @@
             "DetalleOrden": [
                 {
                     "Item": "A",
-                    "Descripcion": "Ensalada cesar",
-                    "Cantidad": 1,
+                    "Descripcion": "Hamburguesa clásica",
+                    "Cantidad": 2,
                     "CostoUnitario": 100.00,
-                    "CostoTotal": 100.00
+                    "CostoTotal": 200.00
                 },
                 {
                     "Item": "C",
@@ -116,17 +116,10 @@
             "DetalleOrden": [
                 {
                     "Item": "A",
-                    "Descripcion": "Ensalada cesar",
+                    "Descripcion": "Tacos de carnitas",
                     "Cantidad": 1,
                     "CostoUnitario": 100.00,
                     "CostoTotal": 100.00
-                },
-                {
-                    "Item": "C",
-                    "Descripcion": "Coca cola",
-                    "Cantidad": 1,
-                    "CostoUnitario": 40.00,
-                    "CostoTotal": 40.00
                 }
             ]
         },
@@ -139,14 +132,14 @@
             "DetalleOrden": [
                 {
                     "Item": "A",
-                    "Descripcion": "Ensalada cesar",
+                    "Descripcion": "Lomo saltado",
                     "Cantidad": 1,
                     "CostoUnitario": 100.00,
                     "CostoTotal": 100.00
                 },
                 {
                     "Item": "C",
-                    "Descripcion": "Coca cola",
+                    "Descripcion": "Cerveza",
                     "Cantidad": 1,
                     "CostoUnitario": 40.00,
                     "CostoTotal": 40.00
@@ -162,17 +155,10 @@
             "DetalleOrden": [
                 {
                     "Item": "A",
-                    "Descripcion": "Ensalada cesar",
+                    "Descripcion": "Sushi",
                     "Cantidad": 1,
                     "CostoUnitario": 100.00,
                     "CostoTotal": 100.00
-                },
-                {
-                    "Item": "C",
-                    "Descripcion": "Coca cola",
-                    "Cantidad": 1,
-                    "CostoUnitario": 40.00,
-                    "CostoTotal": 40.00
                 }
             ]
         },
@@ -185,17 +171,10 @@
             "DetalleOrden": [
                 {
                     "Item": "A",
-                    "Descripcion": "Ensalada cesar",
+                    "Descripcion": "Pasta bolognesa",
                     "Cantidad": 1,
                     "CostoUnitario": 100.00,
                     "CostoTotal": 100.00
-                },
-                {
-                    "Item": "C",
-                    "Descripcion": "Coca cola",
-                    "Cantidad": 1,
-                    "CostoUnitario": 40.00,
-                    "CostoTotal": 40.00
                 }
             ]
         },
@@ -208,17 +187,10 @@
             "DetalleOrden": [
                 {
                     "Item": "A",
-                    "Descripcion": "Ensalada cesar",
+                    "Descripcion": "Paella de mariscos",
                     "Cantidad": 1,
-                    "CostoUnitario": 100.00,
-                    "CostoTotal": 100.00
-                },
-                {
-                    "Item": "C",
-                    "Descripcion": "Coca cola",
-                    "Cantidad": 1,
-                    "CostoUnitario": 40.00,
-                    "CostoTotal": 40.00
+                    "CostoUnitario": 300.00,
+                    "CostoTotal": 300.00
                 }
             ]
         },
@@ -231,7 +203,7 @@
             "DetalleOrden": [
                 {
                     "Item": "A",
-                    "Descripcion": "Ensalada cesar",
+                    "Descripcion": "Lomo saltado",
                     "Cantidad": 1,
                     "CostoUnitario": 100.00,
                     "CostoTotal": 100.00
@@ -254,17 +226,10 @@
             "DetalleOrden": [
                 {
                     "Item": "A",
-                    "Descripcion": "Ensalada cesar",
+                    "Descripcion": "Costillas a la BBQ",
                     "Cantidad": 1,
                     "CostoUnitario": 100.00,
                     "CostoTotal": 100.00
-                },
-                {
-                    "Item": "C",
-                    "Descripcion": "Coca cola",
-                    "Cantidad": 1,
-                    "CostoUnitario": 40.00,
-                    "CostoTotal": 40.00
                 }
             ]
         },
@@ -277,17 +242,10 @@
             "DetalleOrden": [
                 {
                     "Item": "A",
-                    "Descripcion": "Ensalada cesar",
+                    "Descripcion": "Ceviche mixto",
                     "Cantidad": 1,
                     "CostoUnitario": 100.00,
                     "CostoTotal": 100.00
-                },
-                {
-                    "Item": "C",
-                    "Descripcion": "Coca cola",
-                    "Cantidad": 1,
-                    "CostoUnitario": 40.00,
-                    "CostoTotal": 40.00
                 }
             ]
         }
