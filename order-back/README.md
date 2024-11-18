@@ -17,7 +17,14 @@ Este proyecto es una API RESTful que gestiona órdenes, productos (ítems) y usu
 
 Esta guía te llevará a través del proceso para levantar un proyecto Laravel utilizando Docker, ejecutar los seeds y realizar pruebas con PHPUnit.
 
-## Paso 1: Hacer el Build del Contenedor Docker
+## Paso 1: Instalar compose 
+```
+
+docker run --rm -v $(pwd):/app -w /app composer install --no-dev --optimize-autoloader
+```
+
+
+## Paso 2: Hacer el Build del Contenedor Docker
 
 Primero, asegúrate de tener Docker instalado en tu máquina. Si ya lo tienes, navega hasta la raíz de tu proyecto Laravel donde está el archivo `docker-compose.yml`.
 
@@ -36,21 +43,24 @@ docker compose up
 ```bash
 
 php artisan migrate:refresh --seed
+
 ```
 
 ##### Ejecutar los specs , tambien puedes visualizarlos , se probo el controller y los modelos 
+
 ```bash
 
 ./vendor/bin/phpunit tests
+
 ```
 
 
 ### Abordar situaciones de gran volumen de datos
 
-Es importante tener en cuenta que este sistema puede enfrentar situaciones de gran volumen de escrituras y lecturas simultáneas. Para abordar estos requisitos, se han implementado varias estrategias:
+#### Es importante tener en cuenta que este sistema puede enfrentar situaciones de gran volumen de escrituras y lecturas simultáneas. Para abordar estos requisitos, se han implementado varias estrategias:
 
-    Uso de Cache: Las consultas frecuentes se cachean para evitar consultas innecesarias a la base de datos. Esto mejora el rendimiento del sistema y reduce la carga en el servidor de base de datos.
+##### Uso de Cache: Las consultas frecuentes se cachean para evitar consultas innecesarias a la base de datos. Esto mejora el rendimiento del sistema y reduce la carga en el servidor de base de datos.
 
-    Encolamiento de Solicitudes (en desarrollo): Aunque no se implementó por falta de tiempo y porque la fecha limite del reto me gano, el encolamiento de solicitudes es una estrategia que permitiría procesar las operaciones de manera asíncrona. Esto ayudaría a soportar una carga más alta, evitando bloqueos y mejorando la escalabilidad. El encolamiento de solicitudes permite que los trabajos se procesen en segundo plano, mejorando el rendimiento general.
+##### Encolamiento de Solicitudes (en desarrollo): Aunque no se implementó por falta de tiempo y porque la fecha limite del reto me gano, el encolamiento de solicitudes es una estrategia que permitiría procesar las operaciones de manera asíncrona. Esto ayudaría a soportar una carga más alta, evitando bloqueos y mejorando la escalabilidad. El encolamiento de solicitudes permite que los trabajos se procesen en segundo plano, mejorando el rendimiento general.
 
 
