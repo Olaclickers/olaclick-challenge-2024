@@ -1,0 +1,253 @@
+{
+    "headers": [
+        {
+            "text": "Detalle",
+            "align": "start",
+            "key": "Detalle"
+        },
+        {
+            "text": "Cliente",
+            "align": "start",
+            "key": "Cliente"
+        },
+        {
+            "text": "Total ($)",
+            "align": "start",
+            "key": "Total"
+        },
+        {
+            "text": "Estado",
+            "align": "start",
+            "key": "Estado"
+        }
+    ],
+    "orders": [
+        {
+            "Id": 1,
+            "Detalle": "Pollo a la brasa",
+            "Cliente": "Juan Perez",
+            "Total": 120.00,
+            "Estado": "iniciado",
+            "DetalleOrden": [
+                {
+                    "Item": "A",
+                    "Descripcion": "Pollo a la brasa",
+                    "Cantidad": 1,
+                    "CostoUnitario": 120.00,
+                    "CostoTotal": 120.00
+                }
+            ]
+        },
+        {
+            "Id": 2,
+            "Detalle": "Ensalada cesar",
+            "Cliente": "José José",
+            "Total": 140.00,
+            "Estado": "enviado",
+            "DetalleOrden": [
+                {
+                    "Item": "A",
+                    "Descripcion": "Ensalada cesar",
+                    "Cantidad": 1,
+                    "CostoUnitario": 100.00,
+                    "CostoTotal": 100.00
+                },
+                {
+                    "Item": "C",
+                    "Descripcion": "Coca cola",
+                    "Cantidad": 1,
+                    "CostoUnitario": 40.00,
+                    "CostoTotal": 40.00
+                }
+            ]
+        },
+        {
+            "Id": 3,
+            "Detalle": "Pizza margarita",
+            "Cliente": "Carlos Ruiz",
+            "Total": 80.00,
+            "Estado": "iniciado",
+            "DetalleOrden": [
+                {
+                    "Item": "A",
+                    "Descripcion": "Pizza margarita",
+                    "Cantidad": 1,
+                    "CostoUnitario": 100.00,
+                    "CostoTotal": 100.00
+                },
+                {
+                    "Item": "C",
+                    "Descripcion": "Coca cola",
+                    "Cantidad": 1,
+                    "CostoUnitario": 40.00,
+                    "CostoTotal": 40.00
+                }
+            ]
+        },
+        {
+            "Id": 4,
+            "Detalle": "Hamburguesa clásica",
+            "Cliente": "Lucía García",
+            "Total": 95.00,
+            "Estado": "enviado",
+            "DetalleOrden": [
+                {
+                    "Item": "A",
+                    "Descripcion": "Hamburguesa clásica",
+                    "Cantidad": 2,
+                    "CostoUnitario": 100.00,
+                    "CostoTotal": 200.00
+                },
+                {
+                    "Item": "C",
+                    "Descripcion": "Coca cola",
+                    "Cantidad": 1,
+                    "CostoUnitario": 40.00,
+                    "CostoTotal": 40.00
+                }
+            ]
+        },
+        {
+            "Id": 5,
+            "Detalle": "Tacos de carnitas",
+            "Cliente": "Andrés López",
+            "Total": 60.00,
+            "Estado": "iniciado",
+            "DetalleOrden": [
+                {
+                    "Item": "A",
+                    "Descripcion": "Tacos de carnitas",
+                    "Cantidad": 1,
+                    "CostoUnitario": 100.00,
+                    "CostoTotal": 100.00
+                }
+            ]
+        },
+        {
+            "Id": 6,
+            "Detalle": "Lomo saltado",
+            "Cliente": "Ana Martínez",
+            "Total": 110.00,
+            "Estado": "iniciado",
+            "DetalleOrden": [
+                {
+                    "Item": "A",
+                    "Descripcion": "Lomo saltado",
+                    "Cantidad": 1,
+                    "CostoUnitario": 100.00,
+                    "CostoTotal": 100.00
+                },
+                {
+                    "Item": "C",
+                    "Descripcion": "Cerveza",
+                    "Cantidad": 1,
+                    "CostoUnitario": 40.00,
+                    "CostoTotal": 40.00
+                }
+            ]
+        },
+        {
+            "Id": 7,
+            "Detalle": "Sushi variado",
+            "Cliente": "Ricardo Sánchez",
+            "Total": 150.00,
+            "Estado": "enviado",
+            "DetalleOrden": [
+                {
+                    "Item": "A",
+                    "Descripcion": "Sushi",
+                    "Cantidad": 1,
+                    "CostoUnitario": 100.00,
+                    "CostoTotal": 100.00
+                }
+            ]
+        },
+        {
+            "Id": 8,
+            "Detalle": "Pasta bolognesa",
+            "Cliente": "Martín Gómez",
+            "Total": 130.00,
+            "Estado": "iniciado",
+            "DetalleOrden": [
+                {
+                    "Item": "A",
+                    "Descripcion": "Pasta bolognesa",
+                    "Cantidad": 1,
+                    "CostoUnitario": 100.00,
+                    "CostoTotal": 100.00
+                }
+            ]
+        },
+        {
+            "Id": 9,
+            "Detalle": "Paella de mariscos",
+            "Cliente": "María Pérez",
+            "Total": 180.00,
+            "Estado": "iniciado",
+            "DetalleOrden": [
+                {
+                    "Item": "A",
+                    "Descripcion": "Paella de mariscos",
+                    "Cantidad": 1,
+                    "CostoUnitario": 300.00,
+                    "CostoTotal": 300.00
+                }
+            ]
+        },
+        {
+            "Id": 10,
+            "Detalle": "Lomo saltado",
+            "Cliente": "Chicha morada",
+            "Total": 90.00,
+            "Estado": "enviado",
+            "DetalleOrden": [
+                {
+                    "Item": "A",
+                    "Descripcion": "Lomo saltado",
+                    "Cantidad": 1,
+                    "CostoUnitario": 100.00,
+                    "CostoTotal": 100.00
+                },
+                {
+                    "Item": "C",
+                    "Descripcion": "Coca cola",
+                    "Cantidad": 1,
+                    "CostoUnitario": 40.00,
+                    "CostoTotal": 40.00
+                }
+            ]
+        },
+        {
+            "Id": 11,
+            "Detalle": "Costillas a la BBQ",
+            "Cliente": "José Fernández",
+            "Total": 160.00,
+            "Estado": "iniciado",
+            "DetalleOrden": [
+                {
+                    "Item": "A",
+                    "Descripcion": "Costillas a la BBQ",
+                    "Cantidad": 1,
+                    "CostoUnitario": 100.00,
+                    "CostoTotal": 100.00
+                }
+            ]
+        },
+        {
+            "Id": 12,
+            "Detalle": "Ceviche mixto",
+            "Cliente": "Luis Gómez",
+            "Total": 140.00,
+            "Estado": "iniciado",
+            "DetalleOrden": [
+                {
+                    "Item": "A",
+                    "Descripcion": "Ceviche mixto",
+                    "Cantidad": 1,
+                    "CostoUnitario": 100.00,
+                    "CostoTotal": 100.00
+                }
+            ]
+        }
+    ]
+}
