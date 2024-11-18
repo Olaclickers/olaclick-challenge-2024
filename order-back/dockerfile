@@ -14,8 +14,13 @@ RUN set -xe \
 
 RUN apt-get update && apt-get install -y \
     libsqlite3-dev \
+    libzip-dev \
     sudo \
-    && docker-php-ext-install pdo_sqlite
+    unzip \
+    git \
+    && docker-php-ext-configure zip \
+    && docker-php-ext-install pdo_sqlite zip
+
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
