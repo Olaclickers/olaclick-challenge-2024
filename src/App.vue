@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <div class="card border-primary m-5">
+    <div class="card-header bg-light">
+      <AppHeader msg="Restaurante Ficticio" msg2="Estado de las órdenes" />
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-7"></div>
+      <div class="col-3">
+        <button type="button" class="btn btn-secondary"><i class="fa-solid fa-magnifying-glass"></i> Ver ordenes entregadas</button>
+      </div>
+      
+      <div class="col-2">
+        <button type="button" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Nueva orden</button>
+      </div>
+    </div>
+    <AppTable />
+  </div>
+
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import AppTable from './components/Table.vue'
+import AppHeader from './components/Header.vue';
+
+
 
 export default {
+
   name: 'App',
   components: {
-    HelloWorld
+    AppTable,
+    AppHeader
   }
+
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
