@@ -1,0 +1,16 @@
+version: '3.8'
+ 
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/var/www
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - APP_KEY=base64:32BYTES_LONG_BASE64_STRING
+ 
