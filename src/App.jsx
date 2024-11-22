@@ -1,6 +1,6 @@
 import { RouterView } from 'vue-router'
 import { VApp, VMain } from 'vuetify/components'
-import Footer from './components/footer.vue'
+import Footer from './components/Footer.vue'
 
 export default function App() {
   return (
