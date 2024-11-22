@@ -1,0 +1,44 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "detalle": "Pollo a la brasa",
+      "cliente": "Juan Perez",
+      "total": 100,
+      "estado": "iniciado",
+      "acciones": ""
+    },
+    {
+      "id": 2,
+      "detalle": "Ensalada cesar + coca cola",
+      "cliente": "José José",
+      "total": 140,
+      "estado": "enviado",
+      "acciones": ""
+    },
+    {
+      "id": 3,
+      "detalle": "Tacos al Pastor + Agua de Jamaica + Postre de Chocolate",
+      "cliente": "Karla Contrera",
+      "total": 350,
+      "estado": "entregado",
+      "acciones": ""
+    },
+    {
+      "id": 4,
+      "detalle": "Lomo saltado + Chicha morada",
+      "cliente": "Cristina Aguilera",
+      "total": 150,
+      "estado": "iniciado",
+      "acciones": ""
+    },
+    {
+        "id": 5,
+        "detalle": "Wrap de Pollo + Café Americano",
+        "cliente": "Duvan Vergara",
+        "total": 95,
+        "estado": "enviado",
+        "acciones": ""
+      }
+  ]
+}
