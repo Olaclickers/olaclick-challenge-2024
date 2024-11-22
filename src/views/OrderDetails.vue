@@ -10,7 +10,6 @@ const orderId = Number(route.params.id)
 
 // Variable reactiva para los detalles de la orden
 const orderDetails = ref(null)
-console.log(orderDetails)
 
 // Cargar los datos de la orden al montar el componente
 onMounted(() => {
