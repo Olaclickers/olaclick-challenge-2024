@@ -12,18 +12,16 @@
           <th class="text-center">Id</th>
           <th class="text-center">Detalle</th>
           <th class="text-center">Cliente</th>
-          <th class="text-center">Total</th>
+          <th class="text-center">Total ($)</th>
           <th class="text-center">Estado</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="order in paginatedOrders" :key="order.id" @click="viewOrder(order.id)" class="order-row">
-          <td>{{ order.id }}</td>
-          <td>{{ order.detail }}</td>
-          <td>{{ order.client }}</td>
-          <td>$ {{ order.total }}</td>
-          <td :class="statusColor(order.status)">{{ order.status }}</td>
-        </tr>
+        <OrderItem
+          v-for="order in paginatedOrders"
+          :key="order.id"
+          :order="order"
+        />
       </tbody>
     </v-table>
 
@@ -39,65 +37,42 @@
   </v-container>
 </template>
 
-<script>
+<script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { fetchOrders } from '../services/orderService'
+import OrderItem from './OrderItem.vue'
 
-export default {
-  setup() {
-    const orders = ref([])
-    const currentPage = ref(1)
-    const itemsPerPage = 10
+const orders = ref([])
+const currentPage = ref(1)
+const itemsPerPage = 10
 
-    const loadOrders = async () => {
-      orders.value = await fetchOrders()
-    }
-
-    const totalPages = computed(() => Math.ceil(orders.value.length / itemsPerPage))
-
-    const paginatedOrders = computed(() => {
-      const start = (currentPage.value - 1) * itemsPerPage
-      const end = start + itemsPerPage
-      return orders.value.slice(start, end)
-    })
-
-    const router = useRouter()
-    const viewOrder = (orderId) => {
-      router.push({ name: 'OrderDetail', params: { orderId } })
-    }
-
-    const nextPage = () => {
-      if (currentPage.value < totalPages.value) currentPage.value++
-    }
-
-    const prevPage = () => {
-      if (currentPage.value > 1) currentPage.value--
-    }
-
-    const statusColor = (status) => {
-      return status === 'iniciado' ? 'green' : 'blue'
-    }
-
-    const goToDelivered = () => {
-      router.push('/delivered')
-    }
-
-    onMounted(loadOrders)
-
-    return {
-      orders,
-      currentPage,
-      totalPages,
-      paginatedOrders,
-      viewOrder,
-      nextPage,
-      prevPage,
-      statusColor,
-      goToDelivered
-    }
-  },
+const loadOrders = async () => {
+  orders.value = await fetchOrders()
 }
+
+const totalPages = computed(() => Math.ceil(orders.value.length / itemsPerPage))
+
+const paginatedOrders = computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage
+  const end = start + itemsPerPage
+  return orders.value.slice(start, end)
+})
+
+const router = useRouter()
+const goToDelivered = () => {
+  router.push('/delivered')
+}
+
+const nextPage = () => {
+  if (currentPage.value < totalPages.value) currentPage.value++
+}
+
+const prevPage = () => {
+  if (currentPage.value > 1) currentPage.value--
+}
+
+onMounted(loadOrders)
 </script>
 
 <style scoped>
@@ -106,27 +81,6 @@ export default {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 16px;
-}
-
-.order-row {
-  cursor: pointer;
-}
-
-.order-row:hover {
-  background-color: #1e88e5;
-  color: white;
-}
-
-.green {
-  color: #388e3c;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.blue {
-  color: #1976d2; 
-  font-weight: bold;
-  text-transform: uppercase;
 }
 
 .full-width {

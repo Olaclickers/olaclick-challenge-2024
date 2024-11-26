@@ -19,8 +19,8 @@
                 <th class="text-center text-h5">Item</th>
                 <th class="text-center text-h5">Descripción</th>
                 <th class="text-center text-h5">Cantidad</th>
-                <th class="text-center text-h5">Costo unitario</th>
-                <th class="text-center text-h5">Costo total</th>
+                <th class="text-center text-h5">Costo unitario $</th>
+                <th class="text-center text-h5">Costo total $</th>
               </tr>
             </thead>
             <tbody>
@@ -28,14 +28,14 @@
                 <td class="text-center text-h6">{{ item.productId }}</td>
                 <td class="text-center text-h6">{{ item.title }}</td>
                 <td class="text-center text-h6">{{ item.quantity }}</td>
-                <td class="text-center text-h6">$ {{ item.price }}</td>
-                <td class="text-center text-h6">$ {{ item.total }}</td>
+                <td class="text-center text-h6">{{ item.price.toFixed(2) }}</td>
+                <td class="text-center text-h6">{{ item.total.toFixed(2) }}</td>
               </tr>
             </tbody>
           </v-table>
 
           <v-divider></v-divider>
-          <v-card-subtitle class="text-center text-h5 mt-3 font-weight-bold">Total: $ {{ order.total }}</v-card-subtitle>
+          <v-card-subtitle class="text-center text-h5 mt-3 font-weight-bold">Total: $ {{ order.total.toFixed(2) }}</v-card-subtitle>
           <v-card-subtitle class="text-center text-h6 mt-1 mb-3">Estado: {{ order.status }}</v-card-subtitle>
         </v-card>
       </v-col>

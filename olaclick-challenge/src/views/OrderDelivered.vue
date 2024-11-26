@@ -13,7 +13,7 @@
           <th class="text-center">Id</th>
           <th class="text-center">Detalle</th>
           <th class="text-center">Cliente</th>
-          <th class="text-center">Total</th>
+          <th class="text-center">Total $</th>
           <th class="text-center">Estado</th>
         </tr>
       </thead>
@@ -22,7 +22,7 @@
           <td>{{ order.id }}</td>
           <td>{{ order.detail }}</td>
           <td>{{ order.client }}</td>
-          <td>$ {{ order.total }}</td>
+          <td>$ {{ order.total.toFixed(2) }}</td>
           <td class="status">{{ order.status }}</td>
         </tr>
       </tbody>
