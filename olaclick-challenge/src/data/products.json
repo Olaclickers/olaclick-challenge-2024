@@ -1,0 +1,77 @@
+[
+  {
+    "id": "A",
+    "title": "Ensalada cesar",
+    "price": 100
+  },
+  {
+    "id": "B",
+    "title": "Pollo a la brasa",
+    "price": 120
+  },
+  {
+    "id": "C",
+    "title": "Coca cola",
+    "price": 40
+  },
+  {
+    "id": "D",
+    "title": "Lomo saltado",
+    "price": 90
+  },
+  {
+    "id": "E",
+    "title": "Chicha morada",
+    "price": 50
+  },
+  {
+    "id": "F",
+    "title": "Hamburguesa clásica",
+    "price": 80
+  },
+  {
+    "id": "G",
+    "title": "Papas fritas",
+    "price": 30
+  },
+  {
+    "id": "H",
+    "title": "Ravioles",
+    "price": 110
+  },
+  {
+    "id": "I",
+    "title": "Pizza",
+    "price": 150
+  },
+  {
+    "id": "J",
+    "title": "Jugo de naranja",
+    "price": 60
+  },
+  {
+    "id": "K",
+    "title": "Arroz",
+    "price": 40
+  },
+  {
+    "id": "L",
+    "title": "Agua",
+    "price": 10
+  },
+  {
+    "id": "M",
+    "title": "Café",
+    "price": 20
+  },
+  {
+    "id": "N",
+    "title": "Cerveza",
+    "price": 70
+  },
+  {
+    "id": "O",
+    "title": "Torta de chocolate",
+    "price": 120
+  }
+]
