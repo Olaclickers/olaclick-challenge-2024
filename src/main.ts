@@ -6,7 +6,14 @@ import '@mdi/font/css/materialdesignicons.css';
 import { createRouter, createWebHistory } from 'vue-router';
 import { routes } from './router';
 
-const vuetify = createVuetify();
+import * as components from 'vuetify/components';
+import * as directives from 'vuetify/directives';
+
+const vuetify = createVuetify({
+  components,
+  directives,
+});
+
 const router = createRouter({
   history: createWebHistory(),
   routes,
