@@ -3,8 +3,8 @@ import TableProducts from '@/components/Home/TableProducts.vue';
 </script>
 
 <template>
-  <main>
-    <h1>Products</h1>
+  <main class="d-flex flex-column ga-3">
+    <h1 class="text-h3">Lista de Ordenes</h1>
     <TableProducts />
   </main>
 </template>

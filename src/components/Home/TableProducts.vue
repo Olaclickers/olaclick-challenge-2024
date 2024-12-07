@@ -1,145 +1,94 @@
-<script>
-  const desserts = [
-    {
-      name: 'Frozen Yogurt',
-      calories: 159,
-      fat: 6.0,
-      carbs: 24,
-      protein: 4.0,
-      iron: '1',
-    },
-    {
-      name: 'Jelly bean',
-      calories: 375,
-      fat: 0.0,
-      carbs: 94,
-      protein: 0.0,
-      iron: '0',
-    },
-    {
-      name: 'KitKat',
-      calories: 518,
-      fat: 26.0,
-      carbs: 65,
-      protein: 7,
-      iron: '6',
-    },
-    {
-      name: 'Eclair',
-      calories: 262,
-      fat: 16.0,
-      carbs: 23,
-      protein: 6.0,
-      iron: '7',
-    },
-    {
-      name: 'Gingerbread',
-      calories: 356,
-      fat: 16.0,
-      carbs: 49,
-      protein: 3.9,
-      iron: '16',
-    },
-    {
-      name: 'Ice cream sandwich',
-      calories: 237,
-      fat: 9.0,
-      carbs: 37,
-      protein: 4.3,
-      iron: '1',
-    },
-    {
-      name: 'Lollipop',
-      calories: 392,
-      fat: 0.2,
-      carbs: 98,
-      protein: 0,
-      iron: '2',
-    },
-    {
-      name: 'Cupcake',
-      calories: 305,
-      fat: 3.7,
-      carbs: 67,
-      protein: 4.3,
-      iron: '8',
-    },
-    {
-      name: 'Honeycomb',
-      calories: 408,
-      fat: 3.2,
-      carbs: 87,
-      protein: 6.5,
-      iron: '45',
-    },
-    {
-      name: 'Donut',
-      calories: 452,
-      fat: 25.0,
-      carbs: 51,
-      protein: 4.9,
-      iron: '22',
-    },
-  ]
+<script setup lang="ts">
+import { getOrders, getStatus } from "@/services/Api";
+import { ref, onMounted, computed } from "vue";
+import { useRouter } from 'vue-router'
 
-  const FakeAPI = {
-    async fetch ({ page, itemsPerPage, sortBy }) {
-      return new Promise(resolve => {
-        setTimeout(() => {
-          const start = (page - 1) * itemsPerPage
-          const end = start + itemsPerPage
-          const items = desserts.slice()
+interface Header {
+  title: string;
+  align?: "start" | "end" | "center";
+  sortable?: boolean;
+  key: string;
+}
 
-          if (sortBy.length) {
-            const sortKey = sortBy[0].key
-            const sortOrder = sortBy[0].order
-            items.sort((a, b) => {
-              const aValue = a[sortKey]
-              const bValue = b[sortKey]
-              return sortOrder === 'desc' ? bValue - aValue : aValue - bValue
-            })
-          }
+interface Product {
+  id: number;
+  detail: string;
+  client: string;
+  price: number;
+  status_id: number;
+}
 
-          const paginated = items.slice(start, end)
+type Status = {
+  id: string | number;
+  name: string;
+};
 
-          resolve({ items: paginated, total: items.length })
-        }, 500)
-      })
-    },
+const router = useRouter()
+
+const itemsPerPage = ref(10);
+const headers = ref<Header[]>([
+  {
+    title: "ID",
+    align: "start",
+    sortable: false,
+    key: "id",
+  },
+  { title: "Detalle", key: "detail", align: "start" },
+  { title: "Cliente", key: "client", align: "start" },
+  { title: "Total ($)", key: "price", align: "start" },
+  { title: "Estado", key: "status_id", align: "start" },
+  { title: "Actions", key: "actions", align: "center", sortable: false },
+]);
+const search = ref("");
+const serverItems = ref<Product[]>([]);
+const loading = ref(true);
+const totalItems = ref(0);
+const listStatus = ref<Status[]>([]);
+
+const loadItems = async ({
+  page,
+  itemsPerPage,
+  sortBy,
+}: {
+  page: number;
+  itemsPerPage: number;
+  sortBy: { key: string; order: string }[];
+}) => {
+  loading.value = true;
+
+  try {
+    const response = await getOrders(page, itemsPerPage);
+
+    if (response.status !== 200) {
+      throw new Error("Error al cargar los datos del API");
+    }
+
+    const data = await response.data;
+    serverItems.value = data;
+    totalItems.value = data.length;
+  } catch (error) {
+    console.error("Error:", error);
+  } finally {
+    loading.value = false;
   }
+};
 
-  export default {
-    data: () => ({
-      itemsPerPage: 5,
-      headers: [
-        {
-          title: 'Dessert (100g serving)',
-          align: 'start',
-          sortable: false,
-          key: 'name',
-        },
-        { title: 'Calories', key: 'calories', align: 'end' },
-        { title: 'Fat (g)', key: 'fat', align: 'end' },
-        { title: 'Carbs (g)', key: 'carbs', align: 'end' },
-        { title: 'Protein (g)', key: 'protein', align: 'end' },
-        { title: 'Iron (%)', key: 'iron', align: 'end' },
-      ],
-      search: '',
-      serverItems: [],
-      loading: true,
-      totalItems: 0,
-    }),
-    methods: {
-      loadItems ({ page, itemsPerPage, sortBy }) {
-        this.loading = true
-        FakeAPI.fetch({ page, itemsPerPage, sortBy }).then(({ items, total }) => {
-          this.serverItems = items
-          this.totalItems = total
-          this.loading = false
-        })
-      },
-    },
-  }
+const getStatusItem = (id: string) => {
+  return listStatus.value.find((item) => Number(item.id) === Number(id));
+};
+
+const formatPrice = (price: number) => {
+  return price.toFixed(2)
+};
+
+const fetchStatus = async () => {
+  const response = await getStatus();
+  listStatus.value = response.data
+}
+
+onMounted(async () => {
+  await fetchStatus();
+})
 </script>
 
 <template>
@@ -152,5 +101,18 @@
     :search="search"
     item-value="name"
     @update:options="loadItems"
-  ></v-data-table-server>
+  >
+  <template v-slot:item.price="{ item }">
+      <p>{{ formatPrice(item.price) }}</p>
+    </template>
+    <template v-slot:item.status_id="{ item }">
+      <v-chip :prepend-icon="getStatusItem(item.status_id)?.icon" variant="elevated" class="text-capitalize">
+        {{getStatusItem(item.status_id)?.name}}
+      </v-chip>
+    </template>
+    <template v-slot:item.actions="{ item }">
+      <v-icon class="me-2" size="small" @click="router.push(`/orders/${item.id}`)"> mdi-eye </v-icon>
+      <!-- Botones adicionales -->
+    </template>
+  </v-data-table-server>
 </template>
