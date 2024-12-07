@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { ref, watch, computed } from "vue";
+import { postOrder } from "@/services/Api";
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const initialItem = {
   id: 1,
@@ -19,6 +23,7 @@ const initialOrder = {
     },
   ],
 };
+const loading = ref(false);
 const order = ref({ ...initialOrder });
 const selectedNumber = ref(1);
 const valid = ref(false);
@@ -27,12 +32,6 @@ const numbers = Array.from({ length: 5 }, (_, index) => ({
   value: index + 1,
   title: `Opción ${index + 1}`,
 }));
-
-const statusOptions = ref([
-  { value: 1, text: "Iniciado" },
-  { value: 2, text: "Enviado" },
-  { value: 3, text: "Entregado" },
-]);
 
 const rules = {
   required: (value: any) => !!value || "Este campo es requerido.",
@@ -49,7 +48,7 @@ watch(selectedNumber, (newVal) => {
 
 const updateItemTotalPrice = (item: any) => {
   item.total_price = item.price * item.quantity;
-  order.value.price = calculatedPrice.value; // Actualiza el precio total de la orden
+  order.value.price = calculatedPrice.value;
 };
 
 const generateItems = (quantity: number) => {
@@ -59,9 +58,17 @@ const generateItems = (quantity: number) => {
   }));
 };
 
-const submitForm = () => {
+const submitForm = async () => {
   console.log("Orden creada:", order.value);
-  // Aquí puedes hacer un POST a tu API para guardar la orden
+  loading.value = true;
+  try {
+    const response = await postOrder(order.value);
+    router.push(`/order/${response.data.id}`)
+  } catch (error) {
+    console.error("Error crear la orden:", error);
+  } finally {
+    loading.value = false;
+  }
 };
 </script>
 
@@ -148,7 +155,11 @@ const submitForm = () => {
       </v-row>
 
       <div class="py-5 d-flex justify-end">
-        <v-btn type="submit" :disabled="!valid" color="primary"
+        <v-btn
+          type="submit"
+          :disabled="!valid"
+          color="primary"
+          :loading="loading"
           >Crear Orden</v-btn
         >
       </div>

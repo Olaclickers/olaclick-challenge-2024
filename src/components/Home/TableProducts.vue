@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { getOrders, getStatus } from "@/services/Api";
 import { ref, onMounted } from "vue";
-import { useRouter } from 'vue-router'
-import {formatPrice} from '@/utils'
+import { useRouter } from "vue-router";
+import { formatPrice } from "@/utils";
 
 interface Header {
   title: string;
@@ -24,7 +24,7 @@ type Status = {
   name: string;
 };
 
-const router = useRouter()
+const router = useRouter();
 
 const itemsPerPage = ref(10);
 const headers = ref<Header[]>([
@@ -80,12 +80,12 @@ const getStatusItem = (id: string) => {
 
 const fetchStatus = async () => {
   const response = await getStatus();
-  listStatus.value = response.data
-}
+  listStatus.value = response.data;
+};
 
 onMounted(async () => {
   await fetchStatus();
-})
+});
 </script>
 
 <template>
@@ -99,16 +99,26 @@ onMounted(async () => {
     item-value="name"
     @update:options="loadItems"
   >
-  <template v-slot:item.price="{ item }">
+    <template v-slot:item.price="{ item }">
       <p>{{ formatPrice(item.price) }}</p>
     </template>
     <template v-slot:item.status_id="{ item }">
-      <v-chip :prepend-icon="getStatusItem(item.status_id)?.icon" variant="elevated" class="text-capitalize">
-        {{getStatusItem(item.status_id)?.name}}
+      <v-chip
+        :prepend-icon="getStatusItem(item.status_id)?.icon"
+        variant="elevated"
+        class="text-capitalize"
+      >
+        {{ getStatusItem(item.status_id)?.name }}
       </v-chip>
     </template>
     <template v-slot:item.actions="{ item }">
-      <v-icon class="me-2" size="small" @click="router.push(`/order/${item.id}`)"> mdi-eye </v-icon>
+      <v-icon
+        class="me-2"
+        size="small"
+        @click="router.push(`/order/${item.id}`)"
+      >
+        mdi-eye
+      </v-icon>
       <!-- Botones adicionales -->
     </template>
   </v-data-table-server>
