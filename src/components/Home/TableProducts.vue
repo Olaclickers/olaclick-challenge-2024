@@ -119,7 +119,6 @@ onMounted(async () => {
       >
         mdi-eye
       </v-icon>
-      <!-- Botones adicionales -->
     </template>
   </v-data-table-server>
 </template>
