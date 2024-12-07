@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { getOrders, getStatus } from "@/services/Api";
-import { ref, onMounted, computed } from "vue";
+import { ref, onMounted } from "vue";
 import { useRouter } from 'vue-router'
+import {formatPrice} from '@/utils'
 
 interface Header {
   title: string;
@@ -77,10 +78,6 @@ const getStatusItem = (id: string) => {
   return listStatus.value.find((item) => Number(item.id) === Number(id));
 };
 
-const formatPrice = (price: number) => {
-  return price.toFixed(2)
-};
-
 const fetchStatus = async () => {
   const response = await getStatus();
   listStatus.value = response.data
@@ -111,7 +108,7 @@ onMounted(async () => {
       </v-chip>
     </template>
     <template v-slot:item.actions="{ item }">
-      <v-icon class="me-2" size="small" @click="router.push(`/orders/${item.id}`)"> mdi-eye </v-icon>
+      <v-icon class="me-2" size="small" @click="router.push(`/order/${item.id}`)"> mdi-eye </v-icon>
       <!-- Botones adicionales -->
     </template>
   </v-data-table-server>
