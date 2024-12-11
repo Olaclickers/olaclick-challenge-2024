@@ -1,0 +1,33 @@
+{
+  "name": "api-olaclick",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch  index.js",
+    "seeder": "node ./seeders/index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "~1.4.7",
+    "cors": "^2.8.5",
+    "debug": "~4.4.0",
+    "dotenv": "^16.4.7",
+    "express": "~4.21.2",
+    "http-errors": "~2.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.4",
+    "mongoose-paginate-v2": "^1.8.5",
+    "mongoose-seed": "^0.6.0",
+    "mongoose-unique-validator": "^5.0.0",
+    "morgan": "~1.10.0",
+    "pug": "3.0.3",
+    "qrcode": "^1.5.4",
+    "stylus": "0.64.0",
+    "uuid": "^11.0.3"
+  },
+  "engines": {
+    "node": ">=20.14.0 <22.0.0"
+  }
+}

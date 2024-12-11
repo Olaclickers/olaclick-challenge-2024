@@ -1,0 +1,110 @@
+img
+  aspect-ratio auto
+  max-width 100%
+.absolute
+  position absolute
+
+.relative
+  position relative
+
+.g-bg-blue
+  background-color #B3E5FC
+
+.g-bg-yellow
+  background-color #FFF9C4
+.g-bg-green 
+  background-color #DCEDC8
+
+.rounded-6
+  border-radius 6px
+
+.v-btn__content
+  text-transform capitalize!important
+
+.btn-purple
+  background-color #176DF7
+  border-radius 8px
+  display inline-flex
+  color white
+  transition all 0.3s ease-in-out
+  text-decoration none
+  &:hover
+    transform scale(0.90)
+
+.price-total
+  color #0D47A1
+  font-size 22px
+
+.icon-hover
+  transition all 0.3s
+  &:hover
+    transform scale(1.15)
+
+.btn-purple-rounded
+  align-items center
+  border-radius 50%
+  height 60px
+  justify-content center
+  width 30px
+  @extends .btn-purple
+  
+
+.login
+  &-logo
+    width 180px
+    img
+      max-width 100%
+.list-products
+  article
+    h2
+      color #0D47A1
+    h3
+      color #2962FF
+      font-size 25px
+.drag-drop
+  &-content
+    border 4px dashed #F1F2F4
+    border-radius 20px
+    height 250px
+    max-width 100%
+    width 550px
+    p
+      button
+        color #512DA8
+  &-message
+    p
+      color rgb(176,0,32)
+      font-size 14px
+  &-imagen
+    width 320px
+    z-index 20
+    figure
+      width 250px
+      img
+        max-width 100%
+    i
+      position absolute
+      transition all 0.3s ease-in-out
+      right 0px
+      top 0px
+      z-index 30
+      &:hover
+        transform scale(0.90)
+
+
+.v-data-table-header__content
+  color rgba(25, 89, 163, 1)
+  font-weight 600
+  font-size 15px
+
+
+.scan-qrcode
+  margin-top 5px
+  transition all 0.3s ease-in-out
+  &:hover
+    transform scale(0.90)
+  
+
+@media screen and (min-width: 1220px)
+  .read-codeqr
+    width 30%
