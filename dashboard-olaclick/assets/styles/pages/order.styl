@@ -1,0 +1,23 @@
+.order-new
+  .list-products-content
+    article
+      max-width 300px
+      &:not(:nth-of-type(1))
+        margin-top 40px
+
+@media screen and (min-width: 600px)
+  .order-new
+    .list-products
+      &-content
+        column-gap 2em
+        column-count 2
+        article
+          break-inside avoid
+        
+@media screen and (min-width: 1220px)
+  .order-new
+    .list-products
+      max-height 700px
+      overflow auto
+      &-content
+        column-count 3
