@@ -1,0 +1,32 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/vuetify": "^1.12.3",
+    "@pinia/nuxt": "^0.9.0",
+    "nuxt": "^3.15.0",
+    "nuxt-app": "file:",
+    "pinia": "^2.3.0",
+    "vue": "latest",
+    "vue-router": "latest",
+    "vuetify": "^3.7.0-beta.1",
+    "vuetify-nuxt-module": "^0.18.3"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^3.0.2",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  }
+}
