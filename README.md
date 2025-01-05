@@ -28,8 +28,11 @@ El objetivo de este proyecto es implementar una aplicación para la administraci
   - Componentes reutilizables.
 
 
-
 Autor: Guido Naselli
+
 Correo: guidonaselli@gmail.com
+
 LinkedIn: https://www.linkedin.com/in/guidonaselli/
+
 Portfolio personal: https://guidonaselli-portfolio.vercel.app/
+
