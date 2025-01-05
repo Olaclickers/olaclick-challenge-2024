@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "cliente": "Juan Perez",
+    "estado": "Iniciado",
+    "productos": [
+      {
+        "item": "A",
+        "descripcion": "Pollo a la brasa",
+        "cantidad": 1,
+        "unitario": 120,
+        "total": 120
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "cliente": "José José",
+    "estado": "Enviado",
+    "productos": [
+      {
+        "item": "A",
+        "descripcion": "Ensalada cesar",
+        "cantidad": 1,
+        "unitario": 100,
+        "total": 100
+      },
+      {
+        "item": "B",
+        "descripcion": "Coca cola",
+        "cantidad": 1,
+        "unitario": 40,
+        "total": 40
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "cliente": "Ana Gómez",
+    "estado": "Entregado",
+    "productos": [
+      {
+        "item": "A",
+        "descripcion": "Pizza",
+        "cantidad": 1,
+        "unitario": 80,
+        "total": 80
+      },
+      {
+        "item": "B",
+        "descripcion": "Jugo de Naranja",
+        "cantidad": 1,
+        "unitario": 30,
+        "total": 30
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "cliente": "Carlos López",
+    "estado": "Iniciado",
+    "productos": [
+      {
+        "item": "A",
+        "descripcion": "Sándwich de Pollo",
+        "cantidad": 2,
+        "unitario": 50,
+        "total": 100
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "cliente": "Laura Martínez",
+    "estado": "Enviado",
+    "productos": [
+      {
+        "item": "A",
+        "descripcion": "Hamburguesa",
+        "cantidad": 1,
+        "unitario": 120,
+        "total": 120
+      },
+      {
+        "item": "B",
+        "descripcion": "Papas Fritas",
+        "cantidad": 1,
+        "unitario": 40,
+        "total": 40
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "cliente": "María Torres",
+    "estado": "Entregado",
+    "productos": [
+      {
+        "item": "A",
+        "descripcion": "Sopa de Verduras",
+        "cantidad": 1,
+        "unitario": 60,
+        "total": 60
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "cliente": "Pedro Ramírez",
+    "estado": "Iniciado",
+    "productos": [
+      {
+        "item": "A",
+        "descripcion": "Tacos",
+        "cantidad": 3,
+        "unitario": 40,
+        "total": 120
+      },
+      {
+        "item": "B",
+        "descripcion": "Agua Mineral",
+        "cantidad": 1,
+        "unitario": 20,
+        "total": 20
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "cliente": "Sofía Navarro",
+    "estado": "Enviado",
+    "productos": [
+      {
+        "item": "A",
+        "descripcion": "Ceviche",
+        "cantidad": 1,
+        "unitario": 150,
+        "total": 150
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "cliente": "Ricardo Castillo",
+    "estado": "Entregado",
+    "productos": [
+      {
+        "item": "A",
+        "descripcion": "Chaufa de Pollo",
+        "cantidad": 2,
+        "unitario": 70,
+        "total": 140
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "cliente": "Andrés",
+    "estado": "Entregado",
+    "productos": [
+      {
+        "item": "A",
+        "descripcion": "Lomo saltado",
+        "cantidad": 1,
+        "unitario": 90,
+        "total": 90
+      },
+      {
+        "item": "B",
+        "descripcion": "Chicha morada",
+        "cantidad": 1,
+        "unitario": 20,
+        "total": 20
+      }
+    ]
+  }
+]
