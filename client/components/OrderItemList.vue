@@ -33,7 +33,6 @@
 
 <script lang="ts" setup>
 import { ref, computed } from "vue";
-import { defineProps } from "vue";
 
 const props = defineProps({
   items: { type: Array, required: true }, // Ítems disponibles

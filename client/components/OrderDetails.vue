@@ -63,7 +63,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, computed, ref, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { useAxios } from "~/composables/useAxios";
 import { useRouter } from "vue-router";
 

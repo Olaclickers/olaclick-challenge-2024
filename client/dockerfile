@@ -1,0 +1,17 @@
+# Imagen base para compilar el frontend de Vue
+FROM node:18 as build-stage
+WORKDIR /app
+
+ARG API_URL
+ENV API_URL=$API_URL
+
+# Copiamos los archivos del frontend
+COPY . .
+RUN npm install
+RUN npm run build
+
+# Exponemos el puerto del servidor
+EXPOSE 3000
+
+# Iniciamos cliente
+CMD ["npm", "start"]
