@@ -5,13 +5,17 @@
 - Docker >= 20.10
 - Docker compose plugin
 
-## Setup development environment
+## Deployment 
 
 Run the following command in the root of project
 
 ```sh
 ./deployed.sh
 ```
+
+## Open
+
+- [Client](http://localhost:8087/)
 
 ## Read more
 
