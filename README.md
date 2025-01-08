@@ -4,8 +4,6 @@
 
 - Docker >= 20.10
 - Docker compose plugin
-- PHP 8.2
-- NodeJS >= 18
 
 ## Setup development environment
 
