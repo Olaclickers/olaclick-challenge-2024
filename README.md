@@ -40,7 +40,10 @@ Total: $ 140.00
 
 
 # Tecnología:
-- Backend: PHP: Puedes usar Laravel y un ORM. 
+Considera estas tecnologías para tu postulación de Frontend/Backend/Fullstack:
+- Backend (puedes escojer las siguientes tecnologías):
+  + PHP: Puedes usar Laravel y un ORM.
+  + Typescript: NestJS y Sequelize
 - Frontend: Typescript, Vue3, Vue router, Vuetify 
 - Docker.
 
