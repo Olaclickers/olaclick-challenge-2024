@@ -1,0 +1,99 @@
+{
+  "orderItems": [
+    {
+      "orderId": 1,
+      "items": [
+        {
+          "item": "B",
+          "descripcion": "Pollo a la brasa",
+          "cantidad": 1,
+          "costoUnitario": 100.0,
+          "costoTotal": 100.0
+        }
+      ]
+    },
+    {
+      "orderId": 2,
+      "items": [
+        {
+          "item": "A",
+          "descripcion": "Ensalada César",
+          "cantidad": 1,
+          "costoUnitario": 100.0,
+          "costoTotal": 100.0
+        },
+        {
+          "item": "C",
+          "descripcion": "Coca Cola",
+          "cantidad": 1,
+          "costoUnitario": 40.0,
+          "costoTotal": 40.0
+        }
+      ]
+    },
+    {
+      "orderId": 3,
+      "items": [
+        {
+          "item": "D",
+          "descripcion": "Tacos al Pastor",
+          "cantidad": 3,
+          "costoUnitario": 50.0,
+          "costoTotal": 150.0
+        },
+        {
+          "item": "E",
+          "descripcion": "Agua de Jamaica",
+          "cantidad": 1,
+          "costoUnitario": 20.0,
+          "costoTotal": 20.0
+        },
+        {
+          "item": "F",
+          "descripcion": "Postre de Chocolate",
+          "cantidad": 2,
+          "costoUnitario": 90.0,
+          "costoTotal": 180.0
+        }
+      ]
+    },
+    {
+      "orderId": 4,
+      "items": [
+        {
+          "item": "G",
+          "descripcion": "Lomo saltado",
+          "cantidad": 1,
+          "costoUnitario": 75.0,
+          "costoTotal": 75.0
+        },
+        {
+            "item": "H",
+            "descripcion": "Chicha Morada",
+            "cantidad": 1,
+            "costoUnitario": 75.0,
+            "costoTotal": 75.0
+        }
+      ]
+    },
+    {
+      "orderId": 5,
+      "items": [
+        {
+          "item": "I",
+          "descripcion": "Wrap de Pollo",
+          "cantidad": 1,
+          "costoUnitario": 50.0,
+          "costoTotal": 50.0
+        },
+        {
+          "item": "J",
+          "descripcion": "Café Americano",
+          "cantidad": 1,
+          "costoUnitario": 45.0,
+          "costoTotal": 45.0
+        }
+      ]
+    }
+  ]
+}
