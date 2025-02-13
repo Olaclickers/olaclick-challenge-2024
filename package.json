@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@nestjs/bull": "^11.0.2",
+    "@nestjs/microservices": "^11.0.9",
+    "@nestjs/sequelize": "^11.0.0",
+    "@nestjs/swagger": "^11.0.3",
+    "bull": "^4.16.5",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "pg": "^8.13.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.5",
+    "sequelize-typescript": "^2.1.6",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/bull": "^4.10.4"
+  },
+  "scripts": {
+    "start": "nest start",
+    "start:dev": "nest start --watch"
+  }
+}
