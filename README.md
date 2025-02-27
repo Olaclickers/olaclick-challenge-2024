@@ -1,8 +1,10 @@
 # Olaclick Challenge :rocket:
 
-Te presento nuestro reto para que muestres tus habilidades en programación. Puedes tomar el camino de Backend, Frontend o FullStack, nos ayudará a conocer mejor tus preferencias.
+Te presento el reto para formar parte de [OlaClick](https://olaclick.com), la plataforma que digitaliza y optimiza negocios con tecnología innovadora. 
 
-No olvides que el camino para subir tu proyecto es creando un Fork del repositorio y solicitando PR. 
+Puedes tomar el camino de Backend, Frontend o FullStack, nos ayudará a conocer mejor tus preferencias.
+
+Para participar, solo necesitas crear un Fork del repositorio y enviar un Pull Request (PR) con tu solución.
 
 # Problema
 
