@@ -1,0 +1,16 @@
+export const drinks = [
+    { drinks: 'Agua', price: 8.00 },
+    { drinks: 'Agua de Cebada', price: 9.70 },
+    { drinks: 'Aguajina', price: 9.50 },
+    { drinks: 'Chicha Morada', price: 12.30 },
+    { drinks: 'Chicha de Jora', price: 14.20 },
+    { drinks: 'Emoliente', price: 9.30 },
+    { drinks: 'Inca Kola', price: 11.20 },
+    { drinks: 'Jugo de Limón', price: 9.80 },
+    { drinks: 'Jugo de Mango', price: 15.20 },
+    { drinks: 'Jugo de Maracuyá', price: 10.40 },
+    { drinks: 'Jugo de Piña', price: 13.20 },
+    { drinks: 'Limonada con Hierbabuena', price: 9.00 },
+    { drinks: 'Masato', price: 11.30 },
+    { drinks: 'Mate de Coca', price: 11.30 },
+   ]; 
