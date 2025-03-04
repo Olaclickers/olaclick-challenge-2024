@@ -1,0 +1,17 @@
+export const sideDishes = [
+    { side_dishes: 'Arroz', price: 12.30 },
+    { side_dishes: 'Camote', price: 10.00 },
+    { side_dishes: 'Cancha Serrana', price: 16.30 },
+    { side_dishes: 'Choclo', price: 10.00 },
+    { side_dishes: 'Ensalada Criolla', price: 15.20 },
+    { side_dishes: 'Ensalada Fresca', price: 14.20 },
+    { side_dishes: 'Ensalada de Lechuga y Tomate', price: 14.80 },
+    { side_dishes: 'Papa Fritas', price: 10.20 },
+    { side_dishes: 'Papas Sancochadas', price: 14.20 },
+    { side_dishes: 'Plátano Frito', price: 10.20 },
+    { side_dishes: 'Plátano Maduro', price: 11.30 },
+    { side_dishes: 'Salsa Criolla', price: 15.90 },
+    { side_dishes: 'Salsa de Tamarindo', price: 14.60 },
+    { side_dishes: 'Tostada de Pan con Ajo', price: 16.30 },
+    { side_dishes: 'Yuca Sancochada', price: 17.20 },
+   ];
