@@ -1,0 +1,5 @@
+[
+  { "rol": "SystemAdministrator", "role_type": "USER_ROLE" },
+  { "rol": "Developer", "role_type": "USER_ROLE" },
+  { "rol": "Waiter", "role_type": "USER_ROLE" }
+]
