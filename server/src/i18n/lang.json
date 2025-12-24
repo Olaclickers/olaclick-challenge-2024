@@ -1,0 +1,41 @@
+{
+  "AUTH": {
+    "TOKEN_INVALID": "El token del usuario no es válido o ya ha caducado.",
+    "INVALID": "El token de autenticación no es válido o no fue proporcionado.",
+    "INCORRECT_EMAIL_PASSWORD": "Correo electrónico o contraseña incorrectos, por favor verifique",
+    "USER_INACTIVE": "El usuario está inactivo, por favor active su cuenta.",
+    "ROLE_MISMATCH": "El rol seleccionado no coincide, verifique sus credenciales",
+    "INVALID_ROLE": "Rol no válido",
+    "INVALID_PERMISSIONS": "Permisos no válidos o no proporcionados por el parche de rol",
+    "NOT_FOUND": "El usuario no existe.",
+    "DELETED": "La cuenta ha sido eliminada. Por favor, contacte al administrador del sistema.",
+    "BLOCKED": "La cuenta ha sido bloqueada. Por favor, contacte al administrador del sistema."
+  },
+  "DTOS": {
+    "IS_UUID": "El campo {property} debe ser un UUID.",
+    "IS_STRING": "El campo {property} debe ser una cadena de texto.",
+    "IS_NUMBER": "El campo {property} debe ser un numero.",
+    "IS_BOOLEAN": "El campo {property} debe ser un booleano.",
+    "IS_ARRAY": "El campo {property} debe ser un arreglo.",
+    "IS_REQUIRED": "El campo {property} es obligatorio.",
+    "MIN_LENGTH": "El campo {property} debe tener al menos {constraints.0} caracteres",
+    "MAX_LENGTH": "El campo {property} puede tener como máximo {constraints.0} caracteres",
+    "NOT_EXIST": "El {model} no existe.",
+    "NOT_EXIST_IN": "Uno o mas {model} no existen o estan duplicados.",
+    "DUPLICATE": "El {model} ya existe.",
+    "DUPLICATE_USER": "El {model} para este usuario ya existe.",
+    "NO_VALID": "{property} no es válido.",
+    "NOT_EXIST_WITH": "El {model} con el {param} proporcionado no existe.",
+    "INVALID_ENUM": "El campo {property} contiene un valor no permitido. el {property} debe ser tipo: {constraints.1}",
+    "FILE_IS_REQUIRED": "Proporcione el {property} ó {param} para el archivo de recurso: {model}.",
+    "IS_URL": "El campo {property} debe ser una dirección URL correcta."
+  },
+  "USERS": {
+    "EMAIL_EXISTS": "El correo electrónico {email} ya existe."
+  },
+  "ES": {
+    "USERS": {
+      "EMAIL_EXISTS": "El correo electrónico {email} ya existe."
+    }
+  }
+}
