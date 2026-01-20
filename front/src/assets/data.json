@@ -1,0 +1,160 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "detalle": "Pollo a la brasa",
+      "cliente": "Juan Perez",
+      "total": 120.0,
+      "estado": "iniciado",
+      "orderDetails": {
+        "items": [
+          {
+            "item": "A",
+            "descripcion": "Pollo a la brasa",
+            "cantidad": 1,
+            "costoUnitario": 120.0,
+            "costoTotal": 120.0
+          }
+        ],
+        "totalOrder": 120.0
+      }
+    },
+    {
+      "id": 2,
+      "detalle": "Ensalada cesar + coca cola",
+      "cliente": "José José",
+      "total": 140.0,
+      "estado": "enviado",
+      "orderDetails": {
+        "items": [
+          {
+            "item": "A",
+            "descripcion": "Ensalada cesar",
+            "cantidad": 1,
+            "costoUnitario": 100.0,
+            "costoTotal": 100.0
+          },
+          {
+            "item": "B",
+            "descripcion": "Coca cola",
+            "cantidad": 1,
+            "costoUnitario": 40.0,
+            "costoTotal": 40.0
+          }
+        ],
+        "totalOrder": 140.0
+      }
+    },
+    {
+      "id": 3,
+      "detalle": "Lomo saltado + Chicha morada",
+      "cliente": "Maria Garcia",
+      "total": 95.0,
+      "estado": "entregado",
+      "orderDetails": {
+        "items": [
+          {
+            "item": "A",
+            "descripcion": "Lomo saltado",
+            "cantidad": 1,
+            "costoUnitario": 85.0,
+            "costoTotal": 85.0
+          },
+          {
+            "item": "B",
+            "descripcion": "Chicha morada",
+            "cantidad": 1,
+            "costoUnitario": 10.0,
+            "costoTotal": 10.0
+          }
+        ],
+        "totalOrder": 95.0
+      }
+    },
+    {
+      "id": 4,
+      "detalle": "Ceviche + Inca Kola",
+      "cliente": "Carlos Rodriguez",
+      "total": 75.0,
+      "estado": "iniciado",
+      "orderDetails": {
+        "items": [
+          {
+            "item": "A",
+            "descripcion": "Ceviche",
+            "cantidad": 1,
+            "costoUnitario": 65.0,
+            "costoTotal": 65.0
+          },
+          {
+            "item": "B",
+            "descripcion": "Inca Kola",
+            "cantidad": 1,
+            "costoUnitario": 10.0,
+            "costoTotal": 10.0
+          }
+        ],
+        "totalOrder": 75.0
+      }
+    },
+    {
+      "id": 5,
+      "detalle": "Arroz con mariscos Familiar",
+      "cliente": "Ana Martinez",
+      "total": 160.0,
+      "estado": "enviado",
+      "orderDetails": {
+        "items": [
+          {
+            "item": "A",
+            "descripcion": "Arroz con mariscos Familiar",
+            "cantidad": 2,
+            "costoUnitario": 80.0,
+            "costoTotal": 160.0
+          }
+        ],
+        "totalOrder": 160.0
+      }
+    },
+    {
+      "id": 6,
+      "detalle": "Combo Familiar",
+      "cliente": "Pedro Sanchez",
+      "total": 220.0,
+      "estado": "iniciado",
+      "orderDetails": {
+        "items": [
+          {
+            "item": "A",
+            "descripcion": "Pollo a la brasa",
+            "cantidad": 1,
+            "costoUnitario": 120.0,
+            "costoTotal": 120.0
+          },
+          {
+            "item": "B",
+            "descripcion": "Papas fritas familiar",
+            "cantidad": 1,
+            "costoUnitario": 45.0,
+            "costoTotal": 45.0
+          },
+          {
+            "item": "C",
+            "descripcion": "Ensalada familiar",
+            "cantidad": 1,
+            "costoUnitario": 35.0,
+            "costoTotal": 35.0
+          },
+          {
+            "item": "D",
+            "descripcion": "Gaseosa 1.5L",
+            "cantidad": 2,
+            "costoUnitario": 10.0,
+            "costoTotal": 20.0
+          }
+        ],
+        "totalOrder": 220.0
+      }
+    }
+  ]
+}
