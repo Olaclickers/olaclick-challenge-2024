@@ -1,0 +1,6 @@
+[
+    { "rol": "administrador" },
+    { "rol": "cajero" },
+    { "rol": "cocinero" },
+    { "rol": "mesero" }
+  ]
