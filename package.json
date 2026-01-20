@@ -1,0 +1,23 @@
+{
+  "name": "olaclick-challenge-2024",
+  "version": "1.0.0",
+  "description": "Te presento el reto para formar parte de [OlaClick](https://olaclick.com), la plataforma que digitaliza y optimiza negocios con tecnología innovadora.",
+  "main": "order-client.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/mapped-types": "*",
+    "axios": "^1.8.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "playwright": "^1.50.1"
+  }
+}
